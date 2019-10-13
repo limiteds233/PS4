@@ -1,0 +1,39 @@
+<h2>Welcome to Pizza Shop </h2>
+
+ <div class="row">
+
+ <% @products.each do |p| %>
+<div class="col-md-3">
+	<div>
+		<%= p.title %>
+	</div>
+
+	<div>
+		<%= p.discription %>
+	</div>
+	
+	<div>
+		Price: <%= p.price %> rub
+	</div>
+
+	<div>
+		Size: <%= p.size %> см	
+	</div>
+
+	<div>
+		<button class="btn btn-sm btn-success" onclick="add_to_cart(<%= p.id %>)">Add to cart</button>
+	</div>
+	
+</div>
+	<% end %>
+
+
+
+</div>
+
+<br>
+</br>
+
+<button class="btn btn-primary" onclick="something()">Click me</button>
+
+
